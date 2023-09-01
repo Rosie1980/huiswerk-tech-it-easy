@@ -329,3 +329,59 @@ export let inventory = [
 ];
 
 
+/*Opdracht 1A*/
+const tvTypes = inventory.map ((tv) => {
+    return tv.type;
+})
+console.log(tvTypes);
+
+/*Opdracht 1B*/
+const soldOut = inventory.filter ((soldOutTv) => {
+    if (soldOutTv.originalStock - soldOutTv.sold === 0) {
+        return true;
+    } else {
+        return false;
+    }
+})
+console.log(soldOut);
+
+/*Opdracht 1C*/
+const specificTv = inventory.find((theOne) => {
+    return theOne.type === 'NH3216SMART';
+})
+console.log(specificTv);
+
+
+/*Opdracht 1D*/
+const newArray = inventory.map ((tv) => {
+    if (tv.refreshRate >= 100) {
+        return 'name:' + tv.brand + ' ' + tv.name + ' ' + 'suitable: true';
+    } else {
+        return 'name:' + tv.brand + ' ' + tv.name + ' ' + 'suitable: false';
+    }
+})
+console.log(newArray);
+
+/*Opdracht 1E*/
+const suitableScreensize = inventory.filter ((tvSize) => {
+    tvSize.availableSizes.sort((a, b) => b-a);
+    if (tvSize.availableSizes[0] >= 65) {
+        return true;
+    } else {
+        return false;
+    }
+})
+console.log(suitableScreensize);
+
+/*Opdracht 1F*/
+const ambilightTv = inventory.filter ((inventory) => {
+    const hasAmbilight = inventory.options.find((option) => option.name === 'ambiLight');
+    return hasAmbilight.applicable;
+})
+console.log(ambilightTv);
+
+
+
+
+
+
