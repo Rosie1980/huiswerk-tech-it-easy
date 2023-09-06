@@ -3,16 +3,26 @@
     padding: 0;
     box-sizing: border-box;
 }
+.page-container {
+    max-width: 1200px;
+    padding: 35px;
+}
 
 .outer-container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    height: 200px;
+    margin: 32px;
 }
 
 .inner-container-green {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 300px;
+    flex-grow: 0;
+    flex-shrink: 1;
     background-color: lightgreen;
     text-align: center;
     border-radius: 4px;
@@ -31,12 +41,17 @@
 }
 
 .inner-container-blue {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 300px;
+    flex-grow: 0;
+    flex-shrink: 1;
     background-color: royalblue;
     text-align: center;
     border-radius: 4px;
     padding: 20px;
-    border: 1px solid midnightblue;
-}
+    border: 1px solid midnightblue;}
 
 .inner-container-blue h2 {
     color: midnightblue;
@@ -48,6 +63,12 @@
 }
 
 .inner-container-red {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 300px;
+    flex-grow: 0;
+    flex-shrink: 1;
     background-color: indianred;
     text-align: center;
     border-radius: 4px;
@@ -63,4 +84,60 @@
 .inner-container-red h3 {
     color: darkred;
     font-size: 16px;
+}
+
+.tv-container-bestseller {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    max-width: 1200px;
+    padding: 20px 40px;
+    border: 1px dashed black;
+}
+
+.product-image{
+    max-width: 20px;
+}
+
+.tv-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+    gap: 8px;
+}
+
+.icon {
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 500px;
+}
+
+.tv-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    max-width: 1000px;
+    padding: 20px 40px;
+    gap: 34px;
+
 }
